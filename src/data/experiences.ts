@@ -1,0 +1,62 @@
+import { ResumeBlockProps } from "../components/resume-block";
+
+export const workExperiences: ResumeBlockProps[] = [
+  {
+    title: "Software Engineer",
+    company: "Rival Technologies",
+    address: "1199 W Hastings St #300, Vancouver, BC",
+    to: "Current",
+    from: "October 2019",
+    points: [
+      "Developing and maintaining backend services for event-driven microservice systems.",
+      "Working with serverless architecture with AWS using Lambdas, DynamoDB, and SQS to create fast, responsive, and highly scalable responding systems.",
+      "Working in teams to design, create, and deploy services across frontend and backend teams for continuous feature deliveries.",
+      "Supporting DevOps investigate production bugs, data corruption, and performance issues to fix issues impacting end users.",
+      "Supporting frontend development when required to help meet deadlines for feature development.",
+      "Setting up CI/CD pipeline configurations in CircleCI and Bitbucket.",
+    ],
+    techStack: [
+      "React",
+      "NodeJS",
+      "SQL",
+      "MongoDB",
+      "DynamoDB",
+      "Typescript",
+      "GraphQL",
+      "AWS",
+      "Serverless",
+    ],
+  },
+  {
+    title: "Software Developer",
+    company: "Colinkz Media",
+    address: "610 - 610 Granville Street, Vancouver, BC",
+    from: "Jan 2019",
+    to: "March 2020",
+    points: [
+      "Working with UI/UX designer wireframes to develop website designs and features.",
+      "Participating in business development discussions with the team for future development direction.",
+      "Interacting remotely or in-person with team members on daily Agile scrums.",
+      "Fullstack development of the company site and maintaining bug fixes, style revisions, and future development.",
+      "Implementing APIs to gather information to speed up event creation and marketing channels.",
+      "Implementing Stripe API to begin payment and market business channels.",
+      "Implementing React using Webpack and Babel to compile its implementation into a an existing Express and EJS project.",
+    ],
+    techStack: ["NodeJS", "Javascript", "Express", "EJS", "Stripe"],
+  },
+  {
+    title: "Membership Experience Manager",
+    company: "YMCA of Greater Vancouver",
+    address: "282 West 49th Avenue, Vancouver, BC",
+    from: "Feb 2017",
+    to: "Oct 2018",
+    points: [
+      "Managing and delivering daily operation of the customer service and sales team to improve customer engagement.",
+      "Engaging across departments to improve satisfaction rating from 65-70% to 85-90% over 10 months.",
+      "Increasing average monthly membership aquisition and retention consistently in 2017 - 2018.",
+      "Planning and delivering on-going customer service and conflict resolution training, improving conflict resolution with customers",
+      "Developing spreadsheet tools to automate accurate scheduling, expense tracking, and sales goal generation to generate catered sales targets for team members",
+      "Active problem solving to resolve issues across the facility with staff, customers, and other departments.",
+    ],
+  },
+];

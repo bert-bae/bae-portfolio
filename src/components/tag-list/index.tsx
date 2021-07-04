@@ -14,12 +14,12 @@ export type TagProps = {
 
 export type TagListProps = {
   tags: TagProps[];
+  justifyContent?: "flex-start" | "flex-end" | "center";
 };
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    justifyContent: "center",
     flexWrap: "wrap",
     listStyle: "none",
     padding: theme.spacing(0.5),
@@ -29,16 +29,22 @@ const useStyles = makeStyles((theme) => ({
   },
   chip: {
     margin: theme.spacing(0.5),
-    backgroundColor: theme.palette.info.main,
+    // backgroundColor: theme.palette.info.main,
     boxShadow: theme.shadows[5],
-    color: theme.palette.text.primary,
+    // color: "#FFF",
   },
 }));
 
 const TagList: React.FC<TagListProps> = (props) => {
   const classes = useStyles();
   return (
-    <Paper component="ul" className={classes.root}>
+    <Paper
+      component="ul"
+      className={classes.root}
+      style={{
+        justifyContent: props.justifyContent || " center",
+      }}
+    >
       {props.tags.map((data, i) => {
         return (
           <Chip

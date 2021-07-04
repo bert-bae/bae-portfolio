@@ -12,7 +12,7 @@ type PageHeaderProps = {
 const useStyles = makeStyles((theme) => ({
   headerContainer: {
     backgroundColor: theme.palette.primary.main,
-    color: theme.palette.text.primary,
+    color: "#FFF",
     padding: theme.spacing(4),
   },
   profileImage: {
@@ -34,11 +34,7 @@ const PageHeader: React.FC<PageHeaderProps> = (props) => {
       alignItems="center"
       justifyContent="space-between"
     >
-      <img
-        className={classes.profileImage}
-        src={props.image}
-        alt="profile picture"
-      />
+      <img className={classes.profileImage} src={props.image} alt="profile" />
       <Box display="flex" flexDirection="column">
         <Typography variant="h2" component="h2" gutterBottom={!!props.children}>
           {props.title}

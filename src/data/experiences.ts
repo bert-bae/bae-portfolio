@@ -18,6 +18,8 @@ export const workExperiences: ResumeBlockProps[] = [
     techStack: [
       "React",
       "NodeJS",
+      "Elasticsearch",
+      "CICD",
       "SQL",
       "MongoDB",
       "DynamoDB",
@@ -25,6 +27,29 @@ export const workExperiences: ResumeBlockProps[] = [
       "GraphQL",
       "AWS",
       "Serverless",
+    ],
+  },
+  {
+    title: "Mentor",
+    company: "Lighthouse Labs",
+    address: "600-401 W Georgia St, Vancouver, BC",
+    to: "Current",
+    from: "May 2021",
+    points: [
+      "Mentoring web development full-time and flex bootcamp students on programming concepts and exercises.",
+      "Providing support and guidance on curriculum covering frontend and backend technologies in 1-on-1 settings.",
+      "Providing support and guidance on group projects ranging from design, planning, and development to ensure students receive support they need to meet their project MVP goals.",
+    ],
+    techStack: [
+      "React",
+      "NodeJS",
+      "SQL",
+      "MongoDB",
+      "Typescript",
+      "Javascript",
+      "jQuery",
+      "Ruby",
+      "Rails",
     ],
   },
   {

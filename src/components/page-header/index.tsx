@@ -4,7 +4,6 @@ import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Fade } from "react-reveal";
-import DistortionContainer from "../distortion-container";
 import MatrixBackground from "../matrix-background";
 
 type PageHeaderProps = {
@@ -16,8 +15,7 @@ const useStyles = makeStyles((theme) => ({
   headerContainer: {
     backgroundColor: theme.palette.primary.main,
     color: "#FFF",
-    padding: theme.spacing(4),
-    marginBottom: theme.spacing(4),
+    padding: `${theme.spacing(4)}px 0`,
     height: "100vh",
   },
   introContainer: {
@@ -53,15 +51,12 @@ const PageHeader: React.FC<PageHeaderProps> = (props) => {
         flexDirection="column"
       >
         <Fade bottom delay={200}>
-          <DistortionContainer delayFrom={0.5} delayTo={1}>
-            <Typography variant="h4" component="h2">
-              Hello, I am{" "}
-              <span className={classes.highlight}>{props.name}</span>.
-            </Typography>
-            <Typography variant="h4" component="h2">
-              I am a full-stack developer.
-            </Typography>
-          </DistortionContainer>
+          <Typography variant="h4" component="h2">
+            Hello, I am <span className={classes.highlight}>{props.name}</span>.
+          </Typography>
+          <Typography variant="h4" component="h2">
+            I am a full-stack developer.
+          </Typography>
           <Box marginTop="8px">
             {props.pageNav.map((nav) => {
               return (

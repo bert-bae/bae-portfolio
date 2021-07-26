@@ -11,7 +11,7 @@ export const certificationData: CertificationBlockProps[] = [
   {
     title: "Professional Scrum Master I",
     provider: "Scrum.org",
-    from: "Dec 2021",
+    from: "Dec 2020",
     to: "Current",
   },
   {

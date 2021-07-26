@@ -1,8 +1,9 @@
 import React from "react";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-
 import TagList from "../tag-list";
 
 export type ProjectBlockProps = {
@@ -58,42 +59,49 @@ const useStyles = makeStyles((theme) => ({
 
 const ProjectBlock: React.FC<ProjectBlockProps> = (props) => {
   const classes = useStyles();
+  const matchSmall = useMediaQuery("(max-width:560px)");
+
   return (
     <Box className={classes.blockContainer}>
-      <Box
-        display="flex"
-        alignItems="flex-end"
-        justifyContent="space-between"
-        className={classes.blockHeader}
-      >
-        <Typography
-          component="h3"
-          variant="h5"
-          className={classes.projectTitle}
-        >
-          {props.title}
-        </Typography>
-        <Box>
-          {props.demoUrl && (
+      <Grid container spacing={2} className={classes.blockHeader}>
+        <Grid item lg={6} sm={6} xs={12}>
+          <Box display="flex" alignItems="center">
+            <Typography
+              component="h3"
+              variant="h5"
+              className={classes.projectTitle}
+            >
+              {props.title}
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid item lg={6} sm={6} xs={12}>
+          <Box
+            display="flex"
+            justifyContent={matchSmall ? "flex-start" : "flex-end"}
+            alignItems="center"
+          >
+            {props.demoUrl && (
+              <Typography
+                component="a"
+                target="_blank"
+                className={classes.linkToDemo}
+                href={props.demoUrl}
+              >
+                Demo
+              </Typography>
+            )}
             <Typography
               component="a"
               target="_blank"
-              className={classes.linkToDemo}
-              href={props.demoUrl}
+              className={classes.linkToProject}
+              href={props.projectUrl}
             >
-              Demo
+              Github Repo
             </Typography>
-          )}
-          <Typography
-            component="a"
-            target="_blank"
-            className={classes.linkToProject}
-            href={props.projectUrl}
-          >
-            Github Repo
-          </Typography>
-        </Box>
-      </Box>
+          </Box>
+        </Grid>
+      </Grid>
       <Typography variant="body2" component="p">
         {props.description}
       </Typography>

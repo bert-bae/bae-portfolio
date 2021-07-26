@@ -10,7 +10,7 @@ export type SectionHeaderProps = {
 const useStyles = makeStyles((theme) => ({
   sectionHeader: {
     borderBottom: `1px solid`,
-    margin: `${theme.spacing(1.5)}px ${theme.spacing(1)}px`,
+    margin: `${theme.spacing(1.5)}px 0`,
   },
 }));
 

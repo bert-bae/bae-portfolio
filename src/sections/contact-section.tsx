@@ -5,6 +5,7 @@ import Container from "@material-ui/core/Container";
 import ContactBox, { ContactBoxProps } from "../components/contact-box";
 import Typography from "@material-ui/core/Typography";
 import SectionHeader from "../components/section-header";
+import { Fade } from "react-reveal";
 import { SectionDefaults } from "../types";
 
 const useStyles = makeStyles((theme) => ({
@@ -28,14 +29,18 @@ const ContactSection: React.FC<
         direction="row"
         spacing={2}
       >
-        <Grid item lg={5} sm={5} xs={12}>
-          <ContactBox {...props.contactData} />
+        <Grid item lg={3} sm={4} xs={12}>
+          <Fade left delay={50} duration={500}>
+            <ContactBox {...props.contactData} />
+          </Fade>
         </Grid>
-        <Grid item lg={7} sm={7} xs={12}>
-          <SectionHeader title={"About Me"} />
-          <Typography component="p" variant="body2">
-            {props.aboutMe}
-          </Typography>
+        <Grid item lg={9} sm={8} xs={12}>
+          <Fade right delay={100} duration={500}>
+            <SectionHeader title={"About Me"} />
+            <Typography component="p" variant="body2">
+              {props.aboutMe}
+            </Typography>
+          </Fade>
         </Grid>
       </Grid>
     </Container>

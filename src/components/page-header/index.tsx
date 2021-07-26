@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import { Fade } from "react-reveal";
 import MatrixBackground from "../matrix-background";
 
 type PageHeaderProps = {
@@ -50,26 +51,28 @@ const PageHeader: React.FC<PageHeaderProps> = (props) => {
         alignItems="center"
         flexDirection="column"
       >
-        <Typography variant="h4" component="h2">
-          Hello, I am <span className={classes.highlight}>{props.name}</span>.
-        </Typography>
-        <Typography variant="h4" component="h2">
-          I am a full-stack developer.
-        </Typography>
-        <Box marginTop="8px">
-          {props.pageNav.map((nav) => {
-            return (
-              <Button
-                className={classes.pageNavButton}
-                href={nav.target}
-                component="a"
-                disableElevation
-              >
-                {nav.label}
-              </Button>
-            );
-          })}
-        </Box>
+        <Fade bottom delay={200}>
+          <Typography variant="h4" component="h2">
+            Hello, I am <span className={classes.highlight}>{props.name}</span>.
+          </Typography>
+          <Typography variant="h4" component="h2">
+            I am a full-stack developer.
+          </Typography>
+          <Box marginTop="8px">
+            {props.pageNav.map((nav) => {
+              return (
+                <Button
+                  className={classes.pageNavButton}
+                  href={nav.target}
+                  component="a"
+                  disableElevation
+                >
+                  {nav.label}
+                </Button>
+              );
+            })}
+          </Box>
+        </Fade>
       </Box>
     </Box>
   );

@@ -56,7 +56,6 @@ const MatrixBackground: React.FC<MatrixBackgroundProps> = (props) => {
       getRandomNumberBetween(0, binaryTextEntries.length - 1).toFixed(0)
     );
     const text = binaryTextEntries[position];
-    console.log(text);
     matrixLine.push(createLine(text, i));
   }
   return <Box className={classes.background}>{matrixLine}</Box>;

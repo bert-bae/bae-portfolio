@@ -1,9 +1,9 @@
 import { ContactBoxProps } from "../components/contact-box";
 
 export const contactInfo: ContactBoxProps = {
-  address: {
-    value: "3970 Carrigan Court, Burnaby, BC",
-  },
+  // address: {
+  //   value: "3970 Carrigan Court, Burnaby, BC",
+  // },
   email: {
     value: "elbert.bae@gmail.com",
   },

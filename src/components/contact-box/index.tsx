@@ -19,7 +19,7 @@ export type ContactBoxProps = {
   email: ContactObject;
   linkedIn: ContactObject;
   github: ContactObject;
-  address: ContactObject;
+  address?: ContactObject;
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -42,7 +42,7 @@ const ContactBox: React.FC<ContactBoxProps> = (props) => {
       flexDirection="column"
       justifyContent="center"
     >
-      <ContactRow {...address} Icon={HomeIcon} />
+      {address && <ContactRow {...address} Icon={HomeIcon} />}
       <ContactRow {...email} Icon={EmailIcon} />
       <ContactRow {...phoneNumber} Icon={PhoneIcon} />
       <ContactRow {...github} Icon={GitHubIcon} />

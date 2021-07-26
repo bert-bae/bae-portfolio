@@ -5,10 +5,17 @@ import "./App.css";
 
 import { theme } from "./theme";
 import PageHeader from "./components/page-header";
-import { workExperiences, projectData, contactInfo, aboutMe } from "./data";
+import {
+  workExperiences,
+  projectData,
+  contactInfo,
+  aboutMe,
+  certificationData,
+} from "./data";
 import ContactSection from "./sections/contact-section";
 import ExperiencesSection from "./sections/experiences-section";
 import ProjectsSection from "./sections/projects-section";
+import CertificationSection from "./sections/certification-section";
 
 const useStyles = makeStyles({
   root: {
@@ -17,6 +24,7 @@ const useStyles = makeStyles({
     boxSizing: "border-box",
     maxWidth: "1280px",
     margin: "0 auto",
+    paddingBottom: theme.spacing(6),
   },
 });
 
@@ -24,6 +32,7 @@ const identifiers = {
   contacts: "contacts",
   experiences: "experiences",
   projects: "projects",
+  certifications: "certifications",
 };
 const pageNav = [
   {
@@ -37,6 +46,10 @@ const pageNav = [
   {
     label: "Projects",
     target: `#${identifiers.projects}`,
+  },
+  {
+    label: "Certifications",
+    target: `#${identifiers.certifications}`,
   },
 ];
 
@@ -59,6 +72,10 @@ function App() {
         <ProjectsSection
           identifier={identifiers.projects}
           projects={projectData}
+        />
+        <CertificationSection
+          identifier={identifiers.certifications}
+          certifications={certificationData}
         />
       </Box>
     </ThemeProvider>

@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     fontSize: "12px",
     "&:hover": {
-      backgroundColor: theme.palette.info.main,
+      backgroundColor: theme.palette.secondary.main,
       transition: "0.1s all ease-in",
     },
   },

@@ -29,9 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
   chip: {
     margin: theme.spacing(0.5),
-    // backgroundColor: theme.palette.info.main,
     boxShadow: theme.shadows[5],
-    // color: "#FFF",
   },
 }));
 

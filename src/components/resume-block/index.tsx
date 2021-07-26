@@ -7,6 +7,7 @@ import TagList from "../tag-list";
 import Timeline from "../timeline";
 
 export type ResumeBlockProps = {
+  className?: string;
   title: string;
   company: string;
   to: string;

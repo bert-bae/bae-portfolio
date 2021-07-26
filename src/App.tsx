@@ -44,9 +44,9 @@ function App() {
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <PageHeader name="Elbert Bae" pageNav={pageNav} />
       <Box className={classes.root} component="div">
-        <CssBaseline />
         <ContactSection
           identifier={identifiers.contacts}
           contactData={contactInfo}

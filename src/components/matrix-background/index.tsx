@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import { binaryTexts } from "./binary-texts";
+import { getRandomNumberBetween } from "../../utils/randomizer";
 import "./matrix-background.scss";
 
 export type MatrixBackgroundProps = {
@@ -21,10 +22,6 @@ const useStyles = makeStyles((theme) => ({
 
 const getStringifiedPercentage = (numPercent: number): string => {
   return String(numPercent * 100) + "%";
-};
-
-const getRandomNumberBetween = (min: number, max: number): number => {
-  return Math.random() * (max - min) + min;
 };
 
 const createLine = (text: string, key: any) => {

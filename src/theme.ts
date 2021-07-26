@@ -7,12 +7,15 @@ export const theme = createMuiTheme({
       light: "#413941",
     },
     secondary: {
-      main: "#72222F",
-      light: "#DB8895",
+      main: "rgba(0, 143, 17, 1)",
+      light: "rgba(0, 143, 17, 0.7)",
     },
     info: {
       main: "#724A22",
       light: "#DBB188",
+    },
+    text: {
+      primary: "#FFF",
     },
   },
 });

@@ -3,6 +3,7 @@ import Container from "@material-ui/core/Container";
 import SectionHeader from "../components/section-header";
 import ResumeBlock, { ResumeBlockProps } from "../components/resume-block";
 import { Fade } from "react-reveal";
+import DistortionContainer from "../components/distortion-container";
 import { SectionDefaults } from "../types";
 
 const ExperiencesSection: React.FC<
@@ -15,7 +16,9 @@ const ExperiencesSection: React.FC<
       <Fade bottom delay={50} duration={500}>
         <SectionHeader title={"Experiences"}></SectionHeader>
         {props.workExperiences.map((exp) => (
-          <ResumeBlock {...exp} key={exp.title} />
+          <DistortionContainer onHover>
+            <ResumeBlock {...exp} key={exp.title} />
+          </DistortionContainer>
         ))}
       </Fade>
     </Container>

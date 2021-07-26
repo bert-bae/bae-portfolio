@@ -14,18 +14,18 @@ const useStyles = makeStyles((theme) => ({
   timeline: {
     textAlign: "center",
     height: "100%",
-    color: theme.palette.secondary.light,
+    color: theme.palette.info.light,
   },
   fromIcon: {
-    color: theme.palette.secondary.light,
+    color: theme.palette.info.light,
   },
   toIcon: {
-    color: theme.palette.secondary.light,
+    color: theme.palette.info.light,
   },
   line: {
     width: "2px",
     height: "25%",
-    border: `2px solid ${theme.palette.secondary.light}`,
+    border: `2px solid ${theme.palette.info.light}`,
   },
 }));
 
